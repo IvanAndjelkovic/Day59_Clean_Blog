@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 
 app=Flask(__name__)
@@ -10,7 +10,8 @@ def home():
 
 @app.route("/<string:name_page>")
 def page(name_page):
-    return render_template("about.html")
+    
+    return render_template(f"{name_page}.html")
 
 
 if __name__=="__main__":
