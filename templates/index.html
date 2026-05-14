@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title>Luka's Blog - Start Bootstrap Theme</title>
         <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,27 +20,28 @@
       {% include 'header.html' %}
         <!-- Main Content-->
 
-        <div class="container px-4 px-lg-5">
+       <!-- Main Content -->
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
         {% for blog in blogs %}
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="../static/templates/post.html">
-                            <h2 class="post-title">{{blog.title}}</h2>
-                            <h3 class="post-subtitle">{{blog.subtitle}}</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">{{blog.author}}</a>
-                            on {{blog.date}}
-                        </p>
-                    </div>
-         {% endfor %}
-              
-                    <!-- Divider-->
-                    <hr class="my-4" />
-       
+        <div class="post-preview">
+          <a href="#">
+            <h2 class="post-title">
+              {{blog.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{blog.subtitle}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">{{blog.author}}</a>
+            on {{blog.date}}</p>
+        </div>
+        <hr>
+        {% endfor %}
       
 
                     
@@ -48,7 +49,9 @@
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
+          
         </div>
+
     {% include 'footer.html' %}
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

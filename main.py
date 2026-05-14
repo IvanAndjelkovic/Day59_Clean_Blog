@@ -5,7 +5,7 @@ import requests
 
 app=Flask(__name__)
 
-blog_url="https://api.npoint.io/bd3389b6ea02b071067c"
+blog_url="https://api.npoint.io/3edc27e6e4f05fef7d0c"
 response=requests.get(blog_url)
 blog_post_json=response.json()
 
