@@ -16,9 +16,9 @@ def home():
     
     return render_template("index.html", blogs=blog_post_json)
 
-@app.route("/post")
-def show_post():
-    return render_template("post.html")
+@app.route("/post/<int:blog_id>")
+def show_post(blog_id):
+    return render_template("post.html", blog=blog_post_json[blog_id-1])
 
 
 
