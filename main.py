@@ -16,13 +16,10 @@ def home():
     
     return render_template("index.html", blogs=blog_post_json)
 
-# @app.post("/")
-# def home(blog_number):
-#     blog_number=int(blog_number) - 1
-#     # # if int(blog_number) > len(blog_post_json):
-#     #     pass
-#     # else:
-#     #     return render_template("index.html")
+@app.route("/post")
+def show_post():
+    return render_template("post.html")
+
 
 
 
